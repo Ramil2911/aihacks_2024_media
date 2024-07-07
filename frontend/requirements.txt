@@ -1,0 +1,10 @@
+flask
+requests
+torch==2.3.1
+pandas
+geopandas
+catboost
+osmnx
+geopy
+shapely
+scikit-learn

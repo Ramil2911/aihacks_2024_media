@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Медиапомощник</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />
+</head>
+<body class="bg-dark text-white">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-9 p-0">
+                <div id="map"></div>
+            </div>
+            <div class="col-md-3 bg-secondary p-3">
+                <div id="sidebar">
+                    <div id="rateBlock" class="mb-4">
+                        <h2>Расчёт охвата</h2>
+                        <div class="d-flex">
+                            <div id="rateResult" class="mr-2 flex-fill"></div>
+                            <div class="flex-fill">
+                                <select id="dropdown1" class="custom-select mb-2">
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                    <option value="all">All</option>
+                                </select>
+                                <select id="dropdown2" class="custom-select mb-2">
+                                    <option value="13">13</option>
+                                    <option value="18">18</option>
+                                    <option value="25">25</option>
+                                    <option value="30">30</option>
+                                    <option value="35">35</option>
+                                </select>
+                                <select id="dropdown3" class="custom-select mb-2">
+                                    <option value="40">40</option>
+                                    <option value="45">45</option>
+                                    <option value="50">50</option>
+                                    <option value="55">55</option>
+                                    <option value="60">60</option>
+                                    <option value="100">100</option>
+                                </select>
+                                <select id="dropdown4" class="custom-select mb-2">
+                                    <option value="ab">ab</option>
+                                    <option value="ac">ac</option>
+                                    <option value="bc">bc</option>
+                                    <option value="abc">abc</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button id="getRate" class="btn btn-info btn-block">Подсчитать</button>
+                    </div>
+                    <hr class="bg-light">
+                    <div id="optimizeBlock" class="mb-4">
+                        <h2>Поиск конфигурации</h2>
+                        <div class="d-flex">
+                            <div id="optimizationResult" class="mr-2 flex-fill"></div>
+                            <div class="flex-fill">
+                                <label class="mr-2" for="banners">Количество точек</label>
+                                <input class="mr-2" type="number" id="banners" name="Количество баннеров" min="1" max="100" />
+                            </div>
+                        </div>
+                        <button id="getOptimization" class="btn btn-info btn-block">Найти конфигурацию</button>
+                        <div id="optResult" class="mr-2 flex-fill"></div>
+                    </div>
+                    <hr class="bg-light">
+                    <button id="clearMarkers" class="btn btn-danger btn-block mb-2">Очистить маркеры</button>
+                    <button id="exportMarkers" class="btn btn-success btn-block mb-2">Экспортировать маркеры</button>
+                    <input type="file" id="importMarkersFile" class="form-control-file mb-2" style="display: none;">
+                    <button id="importMarkers" class="btn btn-primary btn-block">Импортировать маркеры</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="{{ url_for('static', filename='js/osmtogeojson.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/map.js') }}"></script>
+</body>
+</html>
