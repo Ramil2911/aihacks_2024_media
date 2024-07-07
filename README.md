@@ -27,7 +27,7 @@
 2. Соединение статистическиз данных о населении каждого района Москвы со входными данными.
 3. Загрузка данных о точках интереса вокруг точек конфигурации и добавление этих данных в датасет.
 
-Пайплайн обработки данныж: https://github.com/Ramil2911/aihacks_2024_media/blob/master/experiments/to_submit.ipynb
+Пайплайн обработки данных: https://github.com/Ramil2911/aihacks_2024_media/blob/master/experiments/to_submit.ipynb
 
 
 Веса DAE: https://disk.yandex.ru/d/igIGG0KqfKbAUA
