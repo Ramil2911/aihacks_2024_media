@@ -8,15 +8,26 @@
 - Результат работы: модель предсказания охвата целевой аудитории рекламной кампании, сайт для определения охвата и поиска оптимального расположения баннеров
 
 ## Запуск решения
-**Необходим Docker**. Здесь будет инструкция по запуску.
+В папке frontend ```python app.py```. Зависимости указаны в requirements.txt.
+Также можно использовать docker-compose
 
 ## Этапы работы
 
-Здесь будут этапы работы
+1. Анализ предоставленных данных.
+2. Обучение нескольких моделей поверх предобработыннх данный бейзлайна.
+3. Работа с OpenStreetMap, разработка деления города по административным районам.
+4. Обучение модели Denoising Transformer Autoencoder + Catboost на данных OSM.
+5. Добавление статистических данных и информации о точках интереса из OSM.
+6. Обучение последней модели на новых данных.
+7. Разработка веб-интерфейса и алгоритма оптимизации.
 
-## Пайплайн обработки тестовых данных
+## Пайплайн обработки данных
 
-Здесь будет пайплайн обработки тестовых данных
+1. Преобразуем и чистим входные данные.
+2. Соединение статистическиз данных о населении каждого района Москвы со входными данными.
+3. Загрузка данных о точках интереса вокруг точек конфигурации и добавление этих данных в датасет.
+
+TODO: ссылка на ноутбук с пайплайном
 
 ## Команда «ыыы»
 - [Рамиль Габдрахманов](https://github.com/Ramil2911) | Капитан команды | ML
@@ -30,10 +41,5 @@
 ![Markdown](https://img.shields.io/badge/markdown-%23000000.svg?style=for-the-badge&logo=markdown&logoColor=white)
 ![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white)
 ![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white)
-![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
-![Nginx](https://img.shields.io/badge/nginx-%23009639.svg?style=for-the-badge&logo=nginx&logoColor=white)
-![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
-![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi)
-![Apache Kafka](https://img.shields.io/badge/Apache%20Kafka-000?style=for-the-badge&logo=apachekafka)
-![Telegram](https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)
 ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
+![Flask](https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white)
